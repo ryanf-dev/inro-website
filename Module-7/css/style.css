@@ -1,0 +1,214 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+/* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/sans-serif/lato-regular.ttf");
+}
+
+@font-face {
+    font-family: "Ultra";
+    src: url("../fonts/serif/ultra-regular.ttf");
+}
+
+html {
+    font-family: "Lato", Helvetica, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    font-size: 16px;
+    background-color: #FFFF
+}
+
+body {
+    margin: 3rem;
+    border: .125rem solid black;
+}
+
+header {
+    height: 5rem;
+}
+
+.highlight {
+    background-color: maroon;
+    color: rgb(244, 245, 218);
+    padding: 0.3rem 1rem;
+    border-radius: 0.7rem;
+    font-family: "Ultra";
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+h1 {
+    transform: rotate(-7deg);
+    font-family: "Lato";
+    letter-spacing: 0.125rem;
+    margin: 1.125rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0.25rem;
+    border-top: .125rem solid black;
+    border-bottom: .125rem solid black;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-flexbox;
+    width: 100%;
+    line-height: 3;
+    text-align: center;
+    font-family: montserrat-regular, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    margin-left: 3rem;
+}
+
+nav a:focus,
+nav a:hover {
+    color: black;
+}
+
+nav a:active {
+    background-color: #000;
+    color: #FFF;
+}
+
+
+main {
+    padding: 5rem;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+}
+
+article {
+    width: 80%;
+    padding-right: 2.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-auto-rows: auto;
+    display: block;
+}
+
+main-article {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.article-image {
+    float: left;
+    margin: 10px;
+}
+
+.subsection {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+figure {
+    margin: 0.3rem;
+}
+
+figure img {
+    width: 100%;
+}
+
+button {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(4, 49, 4);
+    padding: 0.7rem;
+    border-radius: 0.8rem;
+    font-family: "Ultra";
+    font-weight: normal;
+    box-shadow: 5px 5px 4px #333;
+}
+
+aside {
+    border-left: .125rem solid black;
+    width: 20%;
+    padding-left: 2.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+aside img {
+    width: 16rem;
+}
+
+aside p {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #555;
+}
+
+.expand {
+    font-size: 0.3rem;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer p a {
+    text-decoration: none;
+}
